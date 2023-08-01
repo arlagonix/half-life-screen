@@ -17,7 +17,7 @@
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.5",
     "react-i18next": "^13.0.2",
-    "react-tsparticles": "^2.10.1",
+    "react-tsparticles": "^2.11.0",
     "tsparticles": "^2.10.1"
   },
   "devDependencies": {
