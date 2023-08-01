@@ -152,7 +152,7 @@ It a lot of time to re-create the Half-Life 2 screen in Figma. Quite a lot, real
 |   |   ├── 📁 chapters       Chapter preview images
 |   |   ├── 📁 fonts          Fonts used
 |   |   ├── 📁 icons          Icons used
-|   |   ├── 📁 sounds         Sound effects
+|   |   ├── 📁 sounds         Sound effects, music
 |   |   ├── 📝 half_lify_guy.mp4  Video with the Valve guy
 |   |   └── 📝 mainBg.jpg     Background image for the intro page
 |   |
