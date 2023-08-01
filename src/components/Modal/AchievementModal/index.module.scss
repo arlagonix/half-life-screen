@@ -1,0 +1,72 @@
+@use "../index.module.scss" as parent;
+
+$bg: #1a1a1a;
+$progressBar-bg: #4e4e4e;
+$progressBar-bar: #9dc350;
+
+.achievementBlackBox {
+  @include parent.customScrollBar();
+
+  --height: 600px;
+  height: var(--height);
+  max-height: var(--height);
+  overflow-y: scroll;
+  background-color: $bg;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-weight: 400;
+}
+
+.progressBarWrapper {
+  background-color: $bg;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressBarDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.header {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.value {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.progressBar {
+  height: 16px;
+  background-color: $progressBar-bg;
+}
+
+.progressBarHandle {
+  height: 100%;
+  background-color: $progressBar-bar;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.buttonContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}

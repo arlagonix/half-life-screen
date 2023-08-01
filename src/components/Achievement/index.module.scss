@@ -1,0 +1,62 @@
+$primary: white;
+$secondary: #4e4e4e;
+$progressBar-bg: #1a1a1a;
+$progressBar-bar: #c8bb91;
+
+.achievementWrapper {
+  padding: 4px 16px 4px 4px;
+  background-color: $secondary;
+  border-radius: 8px;
+
+  display: flex;
+  gap: 8px;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+  color: $primary;
+}
+
+.description {
+  font-size: 12px;
+  font-weight: 400;
+  color: $primary;
+}
+
+.progressBarWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.progressBar {
+  width: 350px;
+  background-color: $progressBar-bg;
+  height: 12px;
+}
+
+.progressBarHandle {
+  height: 100%;
+  background-color: $progressBar-bar;
+}
+
+.progressBarValue {
+  font-weight: 100;
+}
+
+.image {
+  display: block;
+  border-radius: 6px;
+  user-select: none;
+}

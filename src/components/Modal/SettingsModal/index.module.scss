@@ -1,0 +1,94 @@
+$light: #c0bfbf;
+$dark: #454543;
+$text: white;
+
+.tabList {
+  display: flex;
+  gap: 1px;
+  align-items: flex-end;
+}
+
+.tab {
+  flex-grow: 1;
+  border-left: 1px solid $light;
+  border-top: 1px solid $light;
+  border-right: 1px solid $dark;
+  border-bottom: 1px solid $light;
+  cursor: pointer;
+  user-select: none;
+
+  padding: 4px 16px;
+
+  & > * {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &:not(.active) > * {
+    opacity: 0.5;
+    color: $text;
+  }
+
+  &.active {
+    border-bottom-color: transparent;
+    padding-top: 6px;
+  }
+}
+
+.content {
+  padding: 16px;
+  border-left: 1px solid $light;
+  border-right: 1px solid $dark;
+  border-bottom: 1px solid $dark;
+  margin-top: -1px;
+  min-height: 300px;
+
+  font-weight: 300;
+
+  display: flex;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.inputLabel {
+  flex-grow: 1;
+}
+
+.numberInput {
+  $bg: #5a5a5a;
+  $darkBorder: #343434;
+  $lightBorder: #b7b7b7;
+  $textColor: white;
+
+  max-width: 50px;
+  height: 24px;
+  background-color: $bg;
+
+  color: $textColor;
+  padding: 4px;
+  font-size: 12px;
+
+  border-left: 1px solid $darkBorder;
+  border-top: 1px solid $darkBorder;
+  border-right: 1px solid $lightBorder;
+  border-bottom: 1px solid $lightBorder;
+
+  outline: none;
+}

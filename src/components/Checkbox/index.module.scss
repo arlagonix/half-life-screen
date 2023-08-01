@@ -1,0 +1,41 @@
+$bg: #555555;
+$border-one: #424343;
+$border-two: #bababa;
+
+// Inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .checkmark {
+    background: $bg
+      url("data:image/svg+xml;utf8,<svg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 2.5L3 5L7 1' stroke='white' stroke-width='2'/></svg>");
+
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.checkmark {
+  height: 12px;
+  width: 12px;
+  position: relative;
+  background-color: $bg;
+
+  border-left: 1px solid $border-one;
+  border-top: 1px solid $border-one;
+  border-right: 1px solid $border-two;
+  border-bottom: 1px solid $border-two;
+}

@@ -1,0 +1,68 @@
+@mixin colors {
+  --primary: #ff9c00;
+  --secondary: white;
+  --tertiary: black;
+}
+
+.container {
+  @include colors;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  &:is(.default, .active) {
+    cursor: pointer;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.25;
+  }
+}
+
+.header {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  user-select: none;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 24ch;
+
+  &.default {
+    color: var(--secondary);
+  }
+
+  &.active {
+    color: var(--primary);
+  }
+
+  &.disabled {
+    color: var(--tertiary);
+  }
+}
+
+.missionIllustration {
+  display: block;
+  border: 8px solid transparent;
+  width: 100%;
+  object-fit: cover;
+  user-select: none;
+
+  &.default {
+    border-color: var(--tertiary);
+  }
+
+  &.active {
+    border-color: var(--primary);
+  }
+
+  &.disabled {
+    border-color: var(--tertiary);
+  }
+}

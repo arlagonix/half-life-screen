@@ -1,0 +1,54 @@
+.bgImage {
+  display: block;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 1s ease-out;
+}
+
+.main {
+  text-align: left;
+  width: 100%;
+  margin-left: 112px;
+  margin-top: 96px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header {
+  font-family: "Half Life 2", sans-serif;
+  color: white;
+  font-size: 64px;
+  text-shadow: 0 0 4px black;
+  user-select: none;
+}
+
+.nav {
+  margin-top: 40px;
+  max-width: 32ch;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > * {
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 0 0 4px black;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    transition: opacity 0.1s ease-out;
+    user-select: none;
+  }
+
+  & > *:hover {
+    opacity: 0.75;
+  }
+}

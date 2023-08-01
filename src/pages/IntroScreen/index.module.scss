@@ -1,0 +1,96 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+@mixin text {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  pointer-events: none;
+  user-select: none;
+}
+
+.header {
+  @include text;
+
+  font-family: "Half Life 2", sans-serif;
+  font-size: 96px;
+  opacity: 0;
+  animation: fade-in 3s forwards;
+  animation-delay: 5s;
+}
+
+.details {
+  @include text;
+
+  font-weight: 100;
+  font-size: 48px;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fade-in 3s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  display: block;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade-in 3s forwards;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 48px;
+  background-color: rgb(255 255 255 / 0.05);
+  box-shadow: none;
+  border-radius: 8px;
+  border: 1px white solid;
+  z-index: 1;
+  padding: 16px 24px;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  animation: fade-in-button 3s forwards;
+  animation-delay: 7s;
+  cursor: pointer;
+  transition: 1s ease-in;
+  pointer-events: none;
+  font-weight: 100;
+
+  &:hover {
+    box-shadow: 0 0 32px 4px white, 0 0 64px white, 0 0 128px 16px white;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}
+
+@keyframes fade-in-button {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}

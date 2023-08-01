@@ -1,0 +1,51 @@
+$primary: #ff9c00;
+$secondary: white;
+$tertiary: black;
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  border: 8px solid $tertiary;
+  user-select: none;
+
+  &.active {
+    border-color: $primary;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+  user-select: none;
+}
+
+.header {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: $secondary;
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  &.active {
+    color: $primary;
+  }
+}
+
+.date {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $secondary;
+  font-size: 12px;
+
+  &.active {
+    color: $primary;
+  }
+}

@@ -1,0 +1,27 @@
+// Inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+.radiobuttonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .bullet {
+    background: url("/radio_checked.svg");
+  }
+}
+
+.bullet {
+  height: 12px;
+  width: 12px;
+  position: relative;
+  background: url("/radio_default.svg");
+}

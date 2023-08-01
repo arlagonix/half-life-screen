@@ -1,0 +1,45 @@
+$one: #bbbbbb; // border 1
+$two: #454545; // border 2
+$bg: #7b7b7b; // background
+$textColor: white;
+$disabledTextColor: black;
+
+.button {
+  border: 1px solid black;
+
+  border-left-color: $one;
+  border-top-color: $one;
+  border-right-color: $two;
+  border-bottom-color: $two;
+
+  &:active:not(.disabled) {
+    border-left-color: $two;
+    border-top-color: $two;
+    border-right-color: $one;
+    border-bottom-color: $one;
+  }
+
+  background-color: $bg;
+  padding: 0 4px;
+  user-select: none;
+
+  min-height: 24px;
+  min-width: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: $textColor;
+
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: $disabledTextColor;
+  font-weight: 300;
+}

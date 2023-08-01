@@ -1,0 +1,161 @@
+$bg: rgba(118, 118, 118, 0.85);
+$bgDark: #1a1a1a;
+$textColor: white;
+$primary: #ff9c00;
+$borderDark: #434343;
+$borderLight: #bbbaba;
+
+.wrapper {
+  width: min(300px, 100% - 8px * 2);
+  padding: 16px;
+  background-color: $bg;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 125%;
+  color: $textColor;
+  text-align: justify;
+
+  hr {
+    border: none;
+    border-top: 1px solid $borderDark;
+    border-bottom: 1px solid $borderLight;
+  }
+
+  p {
+    line-height: 150%;
+  }
+
+  a {
+    color: $primary;
+    line-height: 150%;
+  }
+
+  li {
+    margin-left: 16px;
+    line-height: 150%;
+  }
+}
+
+.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  cursor: move;
+  user-select: none;
+  flex-grow: 1;
+}
+
+.centeredButtonGroup {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+  &:hover {
+    background: rgb(0 0 0 / 0.15);
+  }
+
+  & > * {
+    display: block;
+  }
+}
+
+$scrollBar-bg: #9b9b9b;
+$scrollBar-handle: #b7b7b7;
+$scrollBar-borderLight: #b7b7b7;
+$scrollBar-borderDark: #545454;
+$scrollBar-arrow-border: #c4c4c4;
+$scrollBar-arrow-bg: #1a1a1a;
+$scrollBar-button: #bbbbbb;
+
+@mixin scrollbar-arrow {
+  border: 1px solid $scrollBar-arrow-border;
+  background-color: $scrollBar-arrow-bg;
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center 5px;
+}
+
+@mixin customScrollBar {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px grey;
+    background-color: $scrollBar-bg;
+    border-left: 1px solid $scrollBar-borderLight;
+    border-right: 1px solid $scrollBar-borderLight;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $scrollBar-handle;
+    border-left: 1px solid $scrollBar-borderDark;
+    border-top: 1px solid $scrollBar-borderDark;
+    border-right: 1px solid $scrollBar-borderLight;
+    border-bottom: 1px solid $scrollBar-borderLight;
+  }
+
+  // Scroll bar button customization
+  // https://stackoverflow.com/a/52361343/19449790
+
+  &::-webkit-scrollbar-button:single-button {
+    background-color: $scrollBar-button;
+    display: block;
+    border-style: solid;
+    height: 16px;
+    width: 16px;
+  }
+
+  /* Up */
+  &::-webkit-scrollbar-button:single-button:vertical:decrement {
+    @include scrollbar-arrow();
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(255, 255, 255)'><polygon points='50,0 0,50 100,50'/></svg>");
+  }
+  /* Down */
+  &::-webkit-scrollbar-button:single-button:vertical:increment {
+    @include scrollbar-arrow();
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(255, 255, 255)'><polygon points='0,0 100,0 50,50'/></svg>");
+  }
+}
+
+.blackBox {
+  @include customScrollBar();
+
+  --height: 400px;
+  height: var(--height);
+  max-height: var(--height);
+  overflow-y: scroll;
+  background-color: $bgDark;
+  padding: 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  font-weight: 400;
+}
