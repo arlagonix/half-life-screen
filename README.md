@@ -1,4 +1,4 @@
-<h1 align="center">Half Life 2 Intro Screen</h1>
+<h1 align="center">Half-Life 2 Starting Screen</h1>
 <p align="center">
   Made with <code>HTML</code>, <code>SCSS</code>, <code>TypeScript</code>, <code>ReactJS</code>, <code>CSS Modules</code>
   <br>
