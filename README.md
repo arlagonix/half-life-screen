@@ -582,7 +582,7 @@ export default defineConfig({
   ](https://hl-inside.me/hl2/) - Assets for chapters preview, names of chapters in russian, achivement names and description in Russian
 - [The Half-Life & Portal Encyclopedia](https://half-life.fandom.com/) - Same but in English
 - [i18n official docs](https://www.i18next.com/) - Official i18n docs
-- https://squoosh.app/ - Awesome iamge optimization tool
+- https://squoosh.app/ - Awesome image optimization tool
 
 ## 👤 Author
 
