@@ -161,7 +161,7 @@ It a lot of time to re-create the Half-Life 2 screen in Figma. Quite a lot, real
 |   |       ├── 📝 index.tsx           Component logic
 |   |       ├── 📝 index.module.scss   Component styles
 |   |       ├── 📝 index.types.tsx     Component types (optional)
-|   |       └── 📝 _other files_       Other additional files
+|   |       └── 📝 other files         Other additional files
 |   |
 │   ├── 📁 hooks              Custom React hooks
 |   |
