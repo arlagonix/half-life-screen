@@ -10,13 +10,11 @@ const App: React.FC = () => {
   const nextStepHandler = () => setStepShown((prev) => prev + 1);
 
   return (
-    <>
-      <Suspense fallback={<Spinner />}>
-        {stepShown === 1 && <IntroScreen nextStepHandler={nextStepHandler} />}
-        {stepShown === 2 && <ValveGuyVideo nextStepHandler={nextStepHandler} />}
-        {stepShown === 3 && <HalfLifeScreen />}
-      </Suspense>
-    </>
+    <Suspense fallback={<Spinner />}>
+      {stepShown === 1 && <IntroScreen nextStepHandler={nextStepHandler} />}
+      {stepShown === 2 && <ValveGuyVideo nextStepHandler={nextStepHandler} />}
+      {stepShown === 3 && <HalfLifeScreen />}
+    </Suspense>
   );
 };
 
