@@ -11,21 +11,11 @@ const App: React.FC = () => {
 
   return (
     <>
-      {stepShown === 1 && (
-        <Suspense fallback={<Spinner />}>
-          <IntroScreen nextStepHandler={nextStepHandler} />
-        </Suspense>
-      )}
-      {stepShown === 2 && (
-        <Suspense fallback={<Spinner />}>
-          <ValveGuyVideo nextStepHandler={nextStepHandler} />
-        </Suspense>
-      )}
-      {stepShown === 3 && (
-        <Suspense fallback={<Spinner />}>
-          <HalfLifeScreen />
-        </Suspense>
-      )}
+      <Suspense fallback={<Spinner />}>
+        {stepShown === 1 && <IntroScreen nextStepHandler={nextStepHandler} />}
+        {stepShown === 2 && <ValveGuyVideo nextStepHandler={nextStepHandler} />}
+        {stepShown === 3 && <HalfLifeScreen />}
+      </Suspense>
     </>
   );
 };
