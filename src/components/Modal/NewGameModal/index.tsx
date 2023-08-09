@@ -2,11 +2,11 @@ import Modal from "..";
 import playSound from "../../../utils/playSound";
 import Button from "../../Button";
 import NewGameCard from "../../NewGameCard";
-import cardsData, { ChapterNumber } from "./cardsData";
+import cardsData from "./cardsData";
 import classes from "./index.module.scss";
-import { useState } from "react";
 import { defineCardStatus, isItemOnPage } from "./utils";
 import { useTranslation } from "react-i18next";
+import { useChosenMission, usePageHandler } from "./hooks";
 
 const maxPage = Math.ceil(cardsData.length / 3);
 
@@ -17,16 +17,8 @@ interface NewGameModalProps {
 
 const NewGameModal: React.FC<NewGameModalProps> = ({ clickHandler }) => {
   const { t } = useTranslation();
-  const [page, setPage] = useState(1);
-  const nextPageHandler = () => setPage((prev) => prev + 1);
-  const prevPageHandler = () => setPage((prev) => prev - 1);
-
-  const [chosenMission, setChosenMission] = useState<"none" | ChapterNumber>(
-    "none"
-  );
-  const setSpecificMission = (chapterNumber: ChapterNumber) => () => {
-    setChosenMission(chapterNumber);
-  };
+  const { page, prevPageHandler, nextPageHandler } = usePageHandler(1);
+  const { chosenMission, setSpecificMission } = useChosenMission("none");
 
   return (
     <Modal

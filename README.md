@@ -159,8 +159,10 @@ It a lot of time to re-create the Half-Life 2 screen in Figma. Quite a lot, real
 │   ├── 📁 components         React components
 |   |   └── 📁 ComponentName
 |   |       ├── 📝 index.tsx           Component logic
-|   |       ├── 📝 index.module.scss   Component styles
-|   |       ├── 📝 index.types.tsx     Component types (optional)
+|   |       ├── 📝 index.module.scss   (optional) Component styles
+|   |       ├── 📝 index.types.tsx     (optional) Component types
+|   |       ├── 📝 hooks.tsx           (optional) Custom hooks used only in this component
+|   |       ├── 📝 utils.ts            (optional) Custom utility functions used only in this component
 |   |       └── 📝 other files         Other additional files
 |   |
 │   ├── 📁 hooks              Custom React hooks
@@ -176,13 +178,13 @@ It a lot of time to re-create the Half-Life 2 screen in Figma. Quite a lot, real
 |   |   └── 📁 PageName
 |   |       ├── 📝 index.tsx           Page logic
 |   |       ├── 📝 index.module.scss   Page styles
-|   |       ├── 📝 index.types.tsx     Page types (optional)
+|   |       ├── 📝 index.types.tsx     (optional) Page types
 |   |       └── 📝 _other files_       Other additional files
 |   |
 │   ├── 📁 utils              Utility functions
 |   |
 │   ├── 📝 App.tsx            App React component
-│   ├── 📝 App.module.scss    App styles (optional)
+│   ├── 📝 App.module.scss    (optional) App styles
 │   ├── 📝 fonts.scss         Fonts definition
 │   ├── 📝 index.html         Main html file
 │   ├── 📝 index.scss         Global styles
