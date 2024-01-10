@@ -93,7 +93,6 @@ It a lot of time to re-create the Half-Life 2 screen in Figma. Quite a lot, real
 ## ⚙️ Tools
 
 - **HTML5**
-  - ReactJS
 - **CSS**
   - CSS Modules
   - SASS/SCSS
